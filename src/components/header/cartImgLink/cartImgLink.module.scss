@@ -1,0 +1,32 @@
+@import "./src/scss/variables";
+
+.cartWrapper {
+  margin-left: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  @media screen  and (max-width: 768px){
+    & {
+      margin-left: 0;
+    }
+  }
+
+  .cartCountActive {
+    position: absolute;
+    top: -15%;
+    left: 30%;
+    width: 25px;
+    height: 25px;
+    background: $commonRed;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cartCountUnActive {
+    display: none;
+  }
+
+}

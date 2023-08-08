@@ -1,0 +1,10 @@
+@import "../../scss/templates";
+
+.cartWrapper {
+  @extend %pageWrapperCommon;
+
+  div .cleanBtn {
+   @extend %commonBtnStyles;
+    margin: 20px 0;
+  }
+}

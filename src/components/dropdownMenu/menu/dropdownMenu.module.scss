@@ -1,0 +1,30 @@
+@import '../../../scss/variables';
+
+.dropdownMenuUnActive {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: -160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: min-content;
+  height: 50vh;
+  background: rgba(128, 128, 128, 0.88);
+  border-bottom-left-radius: 10px;
+  padding-top: 100px;
+  transition: $transition_0_2s;
+}
+.dropdownMenuActive {
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  transition: $transition_0_2s;
+}
+
+@media screen and (max-height: 600px){
+  .dropdownMenuUnActive {
+    height: 100vh;
+  }
+}

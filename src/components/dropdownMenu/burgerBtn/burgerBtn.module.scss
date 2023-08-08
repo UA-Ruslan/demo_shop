@@ -1,0 +1,138 @@
+@import '../../../scss/variables';
+
+.burgerBtnWrapper {
+  z-index: 10;
+  display: none;
+  background: none;
+  border: none;
+  position: fixed;
+  top: 34px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  @media screen and (max-width: 768px) {
+    & {
+      display: block;
+    }
+  }
+
+  .burgerBtnItem {
+    width: 35px;
+    height: 5px;
+    background: $commonRed;
+    border-radius: 3px;
+    position: fixed;
+    top: 50px;
+    right: 5%;
+    border: 1px solid black;
+
+    &:first-child {
+      top: 42px;
+    }
+
+    &:last-child {
+      top: 58px;
+      width: 20px;
+    }
+  }
+
+  .firstChildForward {
+    animation-name: firstChildForwards;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .firstChildBackwards {
+    animation-name: firstChildBackwards;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .middleChildForward {
+    animation-name: middleChildForwards;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .middleChildBackwards {
+    animation-name: middleChildBackwards;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .lastChildForward {
+    animation-name: lastChildForwards;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  .lastChildBackwards {
+    animation-name: lastChildBackwards;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes firstChildForwards {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+    border: none;
+  }
+}
+
+@keyframes firstChildBackwards {
+  0% {
+    transform: rotate(45deg);
+    border: none;
+
+  }
+  100% {
+    transform: rotate(0deg);
+    border: 1px solid black;
+  }
+}
+
+@keyframes middleChildForwards {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-45deg) translate(6px, -5px);
+    border: none;
+  }
+}
+@keyframes middleChildBackwards {
+  0% {
+    transform: rotate(-45deg);
+    border: none;
+
+  }
+  100% {
+    transform: rotate(0deg);
+    border: 1px solid black;
+  }
+}
+@keyframes lastChildForwards {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes lastChildBackwards {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

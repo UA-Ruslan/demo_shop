@@ -1,0 +1,23 @@
+.logoWrapper {
+  white-space: nowrap;
+
+  .logo1 {
+    height: 80px;
+    width: auto;
+    @media screen and (max-width: 768px) {
+      & {
+        height: 80px;
+      }
+    }
+  }
+  .logo2 {
+    height: 45px;
+    width: auto;
+    @media screen and (max-width: 768px) {
+      & {
+        height: 30px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+@import "src/scss/variables";
+
+.headerWrapper {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  @media screen and (max-width: 768px) {
+    & {
+      padding: 0 10px;
+    }
+  }
+
+  .navWrapper {
+    display: block;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .cartThemeBtnWrapper {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
